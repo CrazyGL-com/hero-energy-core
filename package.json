@@ -1,7 +1,7 @@
 {
 	"name": "@crazygl/hero-energy-core",
-	"version": "0.1.0",
-	"description": "Energy Core Reactor — glowing core + orbital rings + procedural plasma arcs.",
+	"version": "0.1.1",
+	"description": "Energy Core Reactor — A glowing reactor core suspended in space — rotating orbital rings, procedural plasma arcs lashing inward, and emissive bloom. A customizable CrazyGL animated hero section — WebGL, React, drop-in.",
 	"type": "module",
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
@@ -21,7 +21,7 @@
 		"LICENSE"
 	],
 	"dependencies": {
-		"@crazygl/core": "^0.1.0"
+		"@crazygl/core": "^0.1.1"
 	},
 	"peerDependencies": {
 		"react": ">=18",
@@ -36,5 +36,30 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"keywords": [
+		"sci-fi",
+		"reactor",
+		"plasma",
+		"bloom",
+		"rings",
+		"premium",
+		"energy-core",
+		"crazygl",
+		"hero",
+		"hero-section",
+		"webgl",
+		"react",
+		"animation",
+		"ui",
+		"landing-page",
+		"interactive",
+		"frontend",
+		"component",
+		"canvas",
+		"three"
+	],
+	"bugs": {
+		"url": "https://github.com/crazygl-com/hero-energy-core/issues"
 	}
 }

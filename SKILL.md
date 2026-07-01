@@ -3,7 +3,7 @@ name: energy-core
 description: "A glowing reactor core suspended in space — rotating orbital rings, procedural plasma arcs lashing inward, and emissive bloom."
 metadata:
   author: "@ybouane"
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 ## How To Use This Skill
