@@ -1,0 +1,70 @@
+{
+	"name": "Energy Core Reactor",
+	"slug": "energy-core",
+	"version": 1,
+	"description": "A glowing reactor core suspended in space — rotating orbital rings, procedural plasma arcs lashing inward, and emissive bloom.",
+	"dependencies": [],
+	"authorName": "@ybouane",
+	"authorUrl": "https://x.com/ybouane",
+	"tags": ["sci-fi", "reactor", "plasma", "bloom", "rings", "premium"],
+	"category": "Premium",
+	"featured": true,
+	"poster": "/images/heroes/energy-core.png",
+	"install": { "package": "@crazygl/hero-energy-core" },
+	"config": {
+		"managedWidth": true, "innerWidth": 1100, "managedHeight": true, "defaultHeight": 720,
+		"styleInheritance": "none", "usesCanvas": true, "usesWebGL": true,
+		"pointerTracking": true, "resizeTracking": true, "interactive": true,
+		"supportsTransparency": true,
+		"supportsFontCustomization": true,
+		"interactivityModes": ["pointer", "none"], "interactivity": "pointer"
+	},
+	"customizer": {
+		"sections": [
+			{
+				"label": "Content",
+				"fields": [
+					{ "id": "contentType", "label": "Content Type", "type": "select", "default": "heading", "options": [
+						{ "label": "Heading", "value": "heading" },
+						{ "label": "Two Columns", "value": "two-columns" },
+						{ "label": "Custom", "value": "custom" }
+					]},
+					{ "id": "heading", "label": "Heading", "type": "text", "default": "Reactor.", "showWhen": { "contentType": "heading" } },
+					{ "id": "subheading", "label": "Subheading", "type": "textarea", "default": "Three rings counter-rotating around a hot core, plasma arcs leaping inward across an audible electromagnetic field.", "showWhen": { "contentType": "heading" } },
+					{ "id": "column1", "label": "Column 1", "type": "node", "default": "<h2>Procedural plasma</h2><p>Random walks raised to a high power.</p>", "showWhen": { "contentType": "two-columns" } },
+					{ "id": "column2", "label": "Column 2", "type": "node", "default": "<h2>Multi-ring orbits</h2><p>Three rings, three speeds.</p>", "showWhen": { "contentType": "two-columns" } },
+					{ "id": "content", "label": "Content", "type": "node", "default": "<h1>Reactor.</h1>", "showWhen": { "contentType": "custom" } }
+				]
+			},
+			{
+				"label": "Layout",
+				"fields": [
+					{ "id": "centerX", "label": "Horizontal position", "type": "slider", "default": 0, "min": -0.6, "max": 0.6, "step": 0.01, "description": "Where the reactor sits across the frame. 0 = centred." }
+				]
+			},
+			{
+				"label": "Core",
+				"fields": [
+					{ "id": "coreColor", "label": "Core colour", "type": "color", "default": "#ffd17a" },
+					{ "id": "innerColor", "label": "Inner colour", "type": "color", "default": "#ffffff" },
+					{ "id": "ringColor", "label": "Ring colour", "type": "color", "default": "#5cf0ff" },
+					{ "id": "plasmaColor", "label": "Plasma colour", "type": "color", "default": "#a26cff" },
+					{ "id": "bgColor", "label": "Background", "type": "color", "default": "#03020a", "showWhen": { "transparent": false } },
+				{ "id": "transparent", "label": "Transparent background", "type": "toggle", "default": false, "description": "Drop the bg star field so the core, rings, and plasma sit on top of the page bg." },
+					{ "id": "coreSize", "label": "Core size", "type": "slider", "default": 0.12, "min": 0.05, "max": 0.30, "step": 0.005 },
+					{ "id": "coreIntensity", "label": "Core intensity", "type": "slider", "default": 1.4, "min": 0, "max": 4, "step": 0.05 },
+					{ "id": "ringIntensity", "label": "Ring intensity", "type": "slider", "default": 1, "min": 0, "max": 3, "step": 0.05 },
+					{ "id": "plasmaIntensity", "label": "Plasma intensity", "type": "slider", "default": 1, "min": 0, "max": 3, "step": 0.05 },
+					{ "id": "bloomStrength", "label": "Bloom", "type": "slider", "default": 1, "min": 0, "max": 2.5, "step": 0.05 },
+					{ "id": "rotationSpeed", "label": "Rotation speed", "type": "slider", "default": 1, "min": 0, "max": 3, "step": 0.05 }
+				]
+			},
+			{
+				"label": "Typography",
+				"fields": [
+					{ "id": "headingFontFamily", "label": "Heading Font", "type": "font", "default": "Inherit", "showWhen": { "contentType": "heading" } }
+				]
+			}
+		]
+	}
+}
